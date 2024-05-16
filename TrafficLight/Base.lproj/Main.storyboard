@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="LIY-fF-ENS">
-                                <rect key="frame" x="132.66666666666666" y="117" width="127.99999999999997" height="618"/>
+                                <rect key="frame" x="143" y="139" width="128" height="618"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="E5v-vQ-ByO">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="480"/>
@@ -61,6 +61,9 @@
                                         <state key="normal" title="START">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="turnTrafficLightOn" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWx-sY-oU9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -72,6 +75,12 @@
                             <constraint firstItem="LIY-fF-ENS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mb3-yg-NRL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="aw3-pv-KKr" id="pSU-hC-LCM"/>
+                        <outlet property="redLight" destination="Xad-rm-xys" id="jLE-0W-3ky"/>
+                        <outlet property="startButton" destination="jb4-j8-RGs" id="5CF-kp-x6E"/>
+                        <outlet property="yellowLight" destination="Zhn-Ql-sl5" id="j3p-ir-SGw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
